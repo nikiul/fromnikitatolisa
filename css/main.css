@@ -874,6 +874,7 @@ ul, li {
   padding-bottom: 130px;
   background-color: #D3859C;
   height: 1250px;
+  overflow-x: hidden;
 }
 
 .footer::before {

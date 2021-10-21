@@ -429,6 +429,7 @@ ul, li {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #D3859C;
+  overflow-x: hidden;
 }
 
 .way::before {

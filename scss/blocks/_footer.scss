@@ -1,0 +1,198 @@
+.footer {
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 130px;
+    background-color: #D3859C;
+    height: 1250px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 24px;
+        top: -207px;
+        background-image: url('../img/cakes2.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 250px;
+        height: 295px;
+        z-index: 3;
+
+        @media (max-width: 1400px) {
+            content: none;
+        }
+    }
+
+    @media (max-width: 1060px) {
+        height: auto;
+    }
+}
+
+.footer__content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 745px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.footer__left {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 1050px) {
+        width: 450px;
+    }
+
+    @media (max-width: 935px) {
+        width: 400px;
+    }
+
+    @media (max-width: 835px) {
+        width: 350px;
+    }
+
+    @media (max-width: 745px) {
+        width: 100%;
+    }
+}
+
+.footer__text {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    img {
+        position: absolute;
+        bottom: -3px;
+        margin-left: 5px;
+    }
+}
+
+.footer__right {
+    width: 500px;
+
+    img {
+        width: 100%;
+    }
+
+    @media (max-width: 1050px) {
+        width: 450px;
+    }
+
+    @media (max-width: 935px) {
+        width: 400px;
+    }
+
+    @media (max-width: 835px) {
+        width: 350px;
+    }
+
+    @media (max-width: 745px) {
+        margin-bottom: 35px;
+        width: 500px;
+    }
+
+    @media (max-width: 550px) {
+        width: 350px;
+    }
+}
+
+@function makelongshadow($color) {
+    $val: 0px 0px $color;
+    @for $i from 1 through 300 {
+      $val: #{$val}, #{$i}px #{$i}px #{$color};
+    }
+    @return $val;
+}
+
+$color: #aeb;
+
+.footer__thanks {
+    margin-left: -30px; /* optical correction */
+    position: absolute;
+    bottom: -250px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @media (max-width: 1060px) {
+        display: none;
+    }
+}
+
+.text {
+    margin-top:50vh;
+    width: 45px;
+    display: inline-block;
+    font-size: 0px;
+    font-family: 'Russo One';
+    font-weight: 900;
+    color:#fff;
+}
+
+@for $i from 1 to 10 {
+    .text:nth-child(#{$i}) {
+    text-shadow: makelongshadow(adjust-hue($color, $i * 30));
+    animation: showup 5s infinite $i * 0.20s; }
+}
+
+@keyframes showup {
+    0% {
+      font-size:0px;
+      transform:rotate(90deg);
+    }
+    5% {
+      font-size:60px;
+
+    }
+    10% {
+      font-size:66px;
+      transform:rotate(0deg);
+    }
+    60% {
+      font-size:66px;
+      opacity: 1;
+    }
+    71% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+      font-size:66px;
+      transform:rotate(0deg);
+    }
+}
+
+
+@keyframes heart {
+    0% { opacity: 0; }
+    30% { left: 50vw; top: 35vh; opacity: 0; font-size: 42px; }
+    40% { left: 50vw; top: 35vh; opacity: 1; font-size: 42px; }
+    70% { left: 50vw; top: 35vh; opacity: 1; font-size: 42px; }
+    80% { left: 50vw; top: 30vh; opacity: 0; font-size: 30px; }
+    100% { opacity: 0; }
+}
+
+.ps {
+    position: absolute;
+    bottom: -660px;
+    right: 0;
+    margin-left: auto;
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    color: #fff;
+
+    @media (max-width: 1060px) {
+        bottom: -120px;
+    }
+}

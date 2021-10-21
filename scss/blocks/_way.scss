@@ -1,0 +1,232 @@
+.way {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #D3859C;
+    // overflow-x: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        width: 20%;
+        background-color: #F2F2F2;
+
+        @media (max-width: 800px) {
+            content: none;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 45px;
+        bottom: 353px;
+        background-image: url('../img/bear.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 366px;
+        height: 560px;
+    }
+}
+
+.way__content {
+    position: relative;
+    height: 2250px;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: -94px;
+        top: 437px;
+        background-image: url('../img/konfeti.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        width: 350px;
+        height: 350px;
+    }
+
+    @media (max-width: 570px) {
+        height: auto;
+    }
+}
+
+.way__title {
+    text-align: left;
+    width: 70%;
+    margin-bottom: 40px;
+    font-size: 30px;
+    text-align: center;
+    color: #fff;
+
+    @media (max-width: 800px) {
+        width: 100%;
+    }
+}
+
+.way__item {
+    position: absolute;
+    padding: 25px;
+    width: 550px;
+    background-color: #FDE2EB;
+    border-radius: 30px;
+    box-shadow: 10px 5px 5px #2b335d;
+    z-index: 1;
+
+    @media (max-width: 570px) {
+        margin-bottom: 40px;
+        width: 100%;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.way__item_first {
+    left: 0;
+
+    &::before {
+        content:  url('../img/way-line1.png');
+        position: absolute;
+        top: 30%;
+        right: -156px;
+        width: 332px;
+        height: 250px;
+    }
+
+    @media (max-width: 570px) {
+        left: auto;
+    }
+}
+
+.way__item-title {
+    color: #252525;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.way__item-text {
+    color: #252525;
+    font-size: 20px;
+}
+
+.way__item_second {
+    top: 240px;
+    right: 0;
+
+    &::before {
+        content:  url('../img/way-line2.png');
+        position: absolute;
+        top: 75%;
+        left: -223px;
+        width: 332px;
+        height: 250px;
+    }
+
+    @media (max-width: 570px) {
+        top: auto;
+        right: auto;
+    }
+}
+
+.way__item_third {
+    top: 500px;
+    left: 0;
+
+    &::before {
+        content:  url('../img/way-line1.png');
+        position: absolute;
+        top: 57%;
+        right: -156px;
+        width: 332px;
+        height: 250px;
+    }
+
+    @media (max-width: 570px) {
+        top: auto;
+        left: auto;
+    }
+}
+
+.way__item_fourth {
+    top: 800px;
+    right: 0;
+
+    &::before {
+        content:  url('../img/way-line2.png');
+        position: absolute;
+        top: 75%;
+        left: -223px;
+        width: 332px;
+        height: 250px;
+    }
+
+    @media (max-width: 570px) {
+        top: auto;
+        right: auto;
+    }
+}
+
+.way__item_fifth {
+    top: 1100px;
+    left: 0;
+
+    &::before {
+        content:  url('../img/way-line1.png');
+        position: absolute;
+        top: 70%;
+        right: -156px;
+        width: 332px;
+        height: 250px;
+    }
+
+    @media (max-width: 570px) {
+        top: auto;
+        left: auto;
+    }
+}
+
+.way__item_sixth {
+    top: 1450px;
+    right: 0;
+
+    &::before {
+        content:  url('../img/way-line2.png');
+        position: absolute;
+        top: 90%;
+        left: -223px;
+        width: 332px;
+        height: 250px;
+    }
+
+    @media (max-width: 570px) {
+        top: auto;
+        right: auto;
+    }
+}
+
+.way__item_seventh {
+    bottom: 0;
+    left: 0;
+
+    @media (max-width: 570px) {
+        bottom: auto;
+        left: auto;
+    }
+}
+
+.hidden {
+    opacity:  0;
+}
+
+.visible {
+    opacity: 1;
+}
